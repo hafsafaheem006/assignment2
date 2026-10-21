@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderWise Travel | Booking Inquiry</title>
+  <!-- External CSS is linked only on this page, as required. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Shared site header and navigation -->
+  <header class="site-header">
+    <h1>WanderWise Travel</h1>
+    <p>Booking Inquiry</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="information.html">Tour Information</a>
+    <a href="registration.html" aria-current="page">Booking Form</a>
+  </nav>
+  <main>
+    <section class="intro">
+      <h2>Tell us about your trip</h2>
+      <p>Complete this sample inquiry form. It demonstrates HTML form controls and browser-side validation; it does not send or store your information.</p>
+    </section>
+    <!-- The form is front-end only; no server submission is configured. -->
+    <form id="registration-form" action="#" method="get">
+      <fieldset>
+        <legend>Personal details</legend>
+        <label for="full-name">Full Name *</label>
+        <input type="text" id="full-name" name="full_name" autocomplete="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="password">Create a sample password *</label>
+        <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required>
+        <small>Password must contain at least 8 characters. Do not use a real password for this demo.</small>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="13" max="100">
+
+        <label for="preferred-date">Preferred Date</label>
+        <input type="date" id="preferred-date" name="preferred_date">
+      </fieldset>
+
+      <fieldset>
+        <legend>Trip preferences</legend>
+        <p class="group-label">Preferred travel style</p>
+        <div class="choice"><input type="radio" id="adventure" name="travel_style" value="adventure" required><label for="adventure">Adventure</label></div>
+        <div class="choice"><input type="radio" id="cultural" name="travel_style" value="cultural"><label for="cultural">Cultural sightseeing</label></div>
+        <div class="choice"><input type="radio" id="relaxation" name="travel_style" value="relaxation"><label for="relaxation">Relaxation</label></div>
+
+        <p class="group-label">Activities you may enjoy (choose any)</p>
+        <div class="choice"><input type="checkbox" id="hiking" name="activities" value="hiking"><label for="hiking">Hiking</label></div>
+        <div class="choice"><input type="checkbox" id="photography" name="activities" value="photography"><label for="photography">Photography</label></div>
+        <div class="choice"><input type="checkbox" id="local-food" name="activities" value="local-food"><label for="local-food">Local food</label></div>
+        <div class="choice"><input type="checkbox" id="heritage" name="activities" value="heritage"><label for="heritage">Historic sites</label></div>
+
+        <label for="destination">Choose a destination *</label>
+        <select id="destination" name="destination" required>
+          <option value="">-- Select a destination --</option>
+          <option value="hunza">Hunza Valley</option>
+          <option value="skardu">Skardu</option>
+          <option value="lahore">Lahore Heritage</option>
+          <option value="swat">Swat Valley</option>
+        </select>
+
+        <label for="comments">Additional information</label>
+        <textarea id="comments" name="comments" rows="5" maxlength="500" placeholder="Share questions or accessibility needs (maximum 500 characters)."></textarea>
+        <small>Maximum 500 characters.</small>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Submit Inquiry</button>
+        <button type="reset" class="secondary-button">Reset Form</button>
+      </div>
+      <p class="notice">Demo only: submitting this form does not create an account or book a trip.</p>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 WanderWise Travel | Educational sample project</p></footer>
+</body>
+</html>

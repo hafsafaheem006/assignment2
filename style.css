@@ -1,0 +1,43 @@
+/* External stylesheet for registration.html */
+:root {
+  --navy: #123b52;
+  --teal: #1e6477;
+  --pale: #f2f8fb;
+  --ink: #183247;
+  --border: #9db7c1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: var(--ink); background: var(--pale); }
+.site-header { background: var(--navy); color: white; padding: 24px; text-align: center; }
+.site-header h1 { margin: 0; }
+.site-header p { margin-bottom: 0; }
+nav { background: var(--teal); text-align: center; padding: 14px; }
+nav a { color: white; margin: 0 14px; font-weight: bold; text-decoration: none; }
+nav a:hover { text-decoration: underline; color: #fff3cf; }
+main { width: min(900px, 94%); margin: 28px auto; }
+.intro, form { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px #d7e5eb; }
+.intro { margin-bottom: 20px; }
+/* ID selector: #registration-form adds visible padding and a border to the form. */
+#registration-form { padding: 24px; border: 2px solid #c5dce3; }
+/* Element selector: paragraph text receives a consistent readable color. */
+p { color: #294b5a; }
+fieldset { border: 1px solid var(--border); border-radius: 8px; padding: 18px; margin: 0 0 22px; }
+legend { color: var(--navy); font-weight: bold; padding: 0 8px; }
+label, .group-label { display: block; font-weight: bold; margin: 12px 0 6px; }
+input, select, textarea { width: 100%; padding: 11px; border: 1px solid #829eaa; border-radius: 5px; font: inherit; background: #fff; color: var(--ink); }
+/* Attribute selector: email inputs have a distinct border color. */
+input[type="email"] { border: 2px solid #4c8795; }
+input[type="radio"], input[type="checkbox"] { width: auto; margin: 0 8px 0 0; accent-color: var(--teal); }
+.choice { display: flex; align-items: center; gap: 5px; margin: 7px 0; }
+.choice label { display: inline; margin: 0; font-weight: normal; }
+input:focus, select:focus, textarea:focus { outline: 3px solid #f0c85a; outline-offset: 2px; border-color: var(--navy); }
+small { display: block; color: #4b626d; margin: 5px 0 12px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+button { border: 0; border-radius: 6px; padding: 12px 20px; background: var(--teal); color: white; font: inherit; font-weight: bold; cursor: pointer; }
+button:hover { background: var(--navy); }
+.secondary-button { background: #657c86; }
+.secondary-button:hover { background: #435963; }
+.notice { background: #fff3cf; border-left: 5px solid #d6ac35; padding: 12px; }
+footer { background: var(--navy); color: white; text-align: center; padding: 18px; margin-top: 32px; }
+footer p { color: white; margin: 0; }
+@media (max-width: 600px) { nav a { display: inline-block; margin: 5px 8px; } main { width: 96%; } .intro, form { padding: 16px; } }
